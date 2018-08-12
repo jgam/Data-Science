@@ -67,4 +67,12 @@ for i in var_mod:
 	df[i] = le.fit_transform(df[i])
 df.dtypes
 ```
+What is this?
+-> efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction. It is merely used to build models and not used for reading the data, manipulating and summarizing it.
+1. Supervised learning algorithms : linear Regression, support vector machines, decision trees to Bayesian methods
+2. Cross-validation : check the accuracy of supervised models on unseen data
+3. Unsupervised learning algorithms : clustering, factor analysis, principal component analysis to unsupervised neural networks
+4. Various toy datasets : came in handy while scikit-learn.
+5. Feature extraction : Useful for etracting features from images and text
+Skicit-Learn requires all inputs to be numeric, we should convert all out categorical variables into numeric by encoding the categories.
 
