@@ -64,9 +64,16 @@ from sklearn.preprocessing import LabelEncoder
 var_mod = ['Gender','Married','Dependents','Education','Self_Employed','Property_Area','Loan_Status']
 le = LabelEncoder()
 for i in var_mod:
-	df[i] = le.fit_transform(df[i])
+	df[i] = le.fit_transform(df[i])#fit label encoder and return encoded labels
 df.dtypes
 ```
+what is LabelEncoder()?
+-> from sklearn import preprocessing
+-> le = preprocessing.LabelEncoder()
+Before doing that, what is data normalization?
+->  process of restructing a relational database in accoradance with a series of normal forms in order to reduce data redundancy and improve data integrity.
+
+
 What is this?
 -> efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction. It is merely used to build models and not used for reading the data, manipulating and summarizing it.
 1. Supervised learning algorithms : linear Regression, support vector machines, decision trees to Bayesian methods
@@ -75,4 +82,6 @@ What is this?
 4. Various toy datasets : came in handy while scikit-learn.
 5. Feature extraction : Useful for etracting features from images and text
 Skicit-Learn requires all inputs to be numeric, we should convert all out categorical variables into numeric by encoding the categories.
+
+
 
