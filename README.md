@@ -115,3 +115,68 @@ clf = svm.SVC(gamma=0.001, C=100.)
 -Choosing the parameters of the model
 we set the value of gamma manually and it is possible to automatically find good values for the parameters by using tools such as grid search and cross valiation
 estimator instance **clf**, as a classifier.
+
+
+### some basic tools
+
+#### Data Operations in Pandas
+Pandas handles data through Series, Data Frame, and Panel.<br/>
+<br/>
+Series is a one-dimensional labeled array capable of holding data of any type(integer, string, float, python objects, etc.) The axis labels are collectively called index. A pandas Series can be created using the following constructor:
+```
+pandas.Series(data, index, dtype, copy)
+```
+
+Constructive example is the following:
+```
+import pandas as pd
+import numpy as np
+data = np.array(['a','b','c','d'])
+s = pd.Series(data)
+print (s)
+```
+
+The output is the following:<br/>
+0 a<br/>
+1 b<br/>
+2 c<br/>
+3 d<br/>
+dtype: object<br/>
+
+A df is a two-dimensional data structure and data is lined up in a tabular fashion in rows and columns. A pandas DataFrame can be created using the following constructor:
+
+```
+pandas.DataFrame(data, index, columns, dtype, copy)
+```
+
+```
+import pandas as pd
+data = {'Name':['Tom', 'Jack','Steve', 'Ricky'], 'Age':[28,34,29,42]}
+df = pd.DataFrame(data, index=['rank1', 'rank2','rank3','rank4'])
+print(df)
+```
+
+The output is the following:<br/>
+        Age Name
+rank1	28	Tom<br/>
+rank2	34	Jack<br/>
+rank3	29	Steve<br/>
+rank4	42	Ricky<br/>
+
+#### Pandas Panel
+*Panel* is a 3D container of data. The term Panel data is derived from econometrics and is partially responsible for the name pandas -- pan(el)-da(ta)-s.<br/>
+Panel constructor is the following:<br/>
+```
+pandas.Panel(data, items, major_axis, minor_axis, dtype, copy)
+```
+
+The constructive example is here!
+```
+import pandas as pd
+import numpy as np
+
+data = {'Item1': pd.DataFrame(np.random.randn(4, 3)),
+		'Item2': pd.DataFrame(np.random.randn(4, 2))}
+p = pd.Panel(data)
+print(p)
+```
