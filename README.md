@@ -5,7 +5,7 @@ jgam
 ## pj1
 Basic tutorial as a Data Scientist
 
--df = pd.read_csv("dataset.csv")
+df = pd.read_csv("dataset.csv")<br/>
 -df.head(10)
 -df.describe() # sums up the data with count mean std min...(statistical values) with given columns
 -df['Property_Area'].value_counts()#counts the values of property area and see if there are missing values
