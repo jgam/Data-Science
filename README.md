@@ -83,5 +83,35 @@ What is this?
 5. Feature extraction : Useful for etracting features from images and text
 Skicit-Learn requires all inputs to be numeric, we should convert all out categorical variables into numeric by encoding the categories.
 
+##pj2 (sickit learn)
 
+### machine learning: the problem setting
+- supervised learning: data comes with additional attributes that we want to prepdict. The problem categories are classification, and regression.
+- unsupervised learning consists of a set of input vectors X without any corresponding target values. The goal in such problems may be to discover groups of similar examples within the data, called as clustering, determining the distribution of data within the input space known as density estimation or to predict the data from a high-dimensional space down to two or three dimensions for the purpose of visualization.
 
+-unsupervised learning-> training data consists of a set of input vectors x without any corresponding target values. The goal in such problems may be to discover groups of similar examples within the data, where it is called clustering, or to determine the distribution of data within the input space, known as density estimation, or to project the data from a high-dimensional space down to two or three dimensions for the purpose of visualization high-dimensional space down to two or three dimensions for the purpose of visualization.
+
+### Loading an example dataset
+```
+from sklearn import datasets
+iris = datasets.load_iris()
+digits = datasets.load_digits()
+```
+
+-scikit-learn comes with a few standard datasets. Iris and digits datasets for classification and the boston house prices dataset for regression.
+-digits.target gives the ground truth for the digit dataset, that is the number corresponding to each digit image that we are trying to learn.
+```
+digits.target ==> array([0,1,2, ..., 8, 9, 8])
+
+```
+
+shape of the data arrays: The data is always a 2D array shape (n_samples, n_features)
+
+### Learning and predicting
+```
+from sklearn import svm
+clf = svm.SVC(gamma=0.001, C=100.)
+```
+-Choosing the parameters of the model
+we set the value of gamma manually and it is possible to automatically find good values for the parameters by using tools such as grid search and cross valiation
+estimator instance **clf**, as a classifier.
